@@ -43,6 +43,7 @@
     </div>
 </div>
 
+
 <!-- Bootstrap core JavaScript-->
 <script src="{{asset('back/')}}/vendor/jquery/jquery.min.js"></script>
 <script src="{{asset('back/')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -62,6 +63,15 @@
 <script src="{{asset('back/')}}/vendor/datatables/jquery.dataTables.min.js"></script>
 <script src="{{asset('back/')}}/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 <script src="{{asset('back/')}}/js/demo/datatables-demo.js"></script>
+<script type="text/javascript">
+    console.log("asdsad");
+    var myModalEl = document.querySelector('#deleteModal');
+    var modal = bootstrap.Modal.getOrCreateInstance(myModalEl); // Returns a Bootstrap modal instance
+    console.log(modal);
+    myModalEl.addEventListener('hidden.bs.modal', function (event) {
+        console.log("sdfdsfs");
+    })
+</script>
 @yield('js')
 @toastr_js
 @toastr_render
